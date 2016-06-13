@@ -1,0 +1,81 @@
+.main-wrapper{
+	width: 100%;
+    height: 100%;
+}
+.main-wrapper .show-content{
+	width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 0 0 5px;
+}
+.main-wrapper .show-content .show-content-top {
+    padding: 3px 2px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #56ABE4;
+    position: relative;
+}
+.main-wrapper .show-content .show-content-top .show-content-time {
+    float: right;
+}
+.main-wrapper .show-content .show-content-top .on{
+    padding-right: 82px;
+}
+.main-wrapper .show-content .show-content-top .reference-reply{
+    margin-right: 60px;
+}
+.main-wrapper .show-content .show-content-top  .reference {
+    position: absolute;
+    right: 5px;
+}
+.main-wrapper .show-content .show-content-top  .reference a{
+    color: #00f;
+}
+.main-wrapper .show-content .show-content-top  .reference a:hover{
+    text-decoration: underline;
+    color: #f00;
+}
+.main-wrapper .show-content .show-content-top .landlord{
+    font-style: normal;
+    font-size: 18px;
+    padding: 3px;
+    color: #f40;
+    position: absolute;
+    font-weight: bold;
+    right: 0px;
+    top: -3px;
+}
+.content-area{
+	text-indent: 20px;
+	padding-bottom: 30px;
+	padding-top: 5px;	
+}
+.main-wrapper .show-content .show-top{
+	padding: 10px 5px;
+    background-color: #E4F4FE;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 8px #d2d2d2;
+    border-radius: 10px;
+}
+.main-wrapper .show-content .show-top .reference-reply-content {
+    width: 95%;
+    border: 1px solid #bbb;
+    margin: 0 auto;
+    margin-top: 5px;
+    background: #DEDEDE;
+    font-size: 14px;
+}
+.main-wrapper .show-content .show-top .reference-reply-content .reply-content {
+    padding: 8px;
+    text-indent: 25px;
+}
+.reply-btn {
+    position: absolute;
+    right: 45px;
+}
+.reply-btn a{
+    color: #004CFE;
+}
+.reply-btn a:hover{
+    text-decoration: underline;
+    color: #f40;
+}

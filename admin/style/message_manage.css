@@ -1,0 +1,7 @@
+.insert-tab tr td {
+    text-align: left;
+    word-break: break-all;
+}
+.insert-tab tr td {
+    text-indent: 5px; 
+}

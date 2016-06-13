@@ -1,0 +1,24 @@
+.table{
+	padding: 40px 50px;
+}
+.myform{
+	width: 90%;
+	border: 1px solid #E1E5EE;
+	border-bottom: 1px solid #fff;
+}
+.insert-tab{
+	width: 100%;
+}
+.insert-tab tr{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+}
+.insert-tab tr td{
+	text-indent: 10px;
+}
+
+.man-btn{
+	padding: 3px 5px;
+	cursor: pointer;
+}

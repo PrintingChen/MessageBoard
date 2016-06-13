@@ -1,0 +1,31 @@
+
+.bg-color{
+	font-weight: bold;
+	background-color: #E7F1FE;
+}
+.insert-tab tr td{
+	text-align: center;
+}
+.insert-tab tr td a:hover{
+	color: #f00;
+	text-decoration: underline;
+}
+.del{
+	height: 35px;
+	line-height: 35px;
+}
+.del .comm a{
+	display: block;
+}
+.comm{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	padding-left: 20px;
+}
+.del .del-all{
+	background: url(../images/del.png) no-repeat left center;
+}
+.del .sel-all{
+	background: url(../images/sel.png) no-repeat left center;
+}

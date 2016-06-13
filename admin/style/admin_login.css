@@ -1,0 +1,28 @@
+#submit {
+    background-image: url(../images/list_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #F0F8FF;
+    padding: 20px 13px 13px 13px;
+}
+
+#submit .submit_div{
+    width: 320px;
+    margin: 0 auto;
+    padding: 22px;
+}
+input{
+    padding: 2px;
+}
+#btn{
+    padding: 3px 20px;
+    cursor: pointer;
+    margin-left: 101px;
+}
+#submit .submit_div img{
+    border: 0;
+    cursor: pointer;
+    margin-left: 101px;
+    position: relative;
+    top: -23px;
+    left: 185px;
+}

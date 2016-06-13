@@ -1,0 +1,43 @@
+#submit {
+    background-image: url(../images/list_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #F0F8FF;
+    padding: 20px 13px 13px 13px;
+}
+
+form {
+    border: 1px solid #D5E4F4;
+    background: #FFF;
+    padding: 10px 10px 16px 10px;
+    margin: 0px;
+}
+label {
+    text-align: right;
+    margin-left: 65px;
+    float: left;
+    padding: 3px;
+    width: 92px;
+}
+input {
+    padding: 2px;
+}
+textarea{
+	width: 370px;
+	height: 140px;
+	padding: 5px;
+}
+#submit img {
+    margin-left: 8px;
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}
+#sbutton {
+    margin-left: 163px;
+    height: 22px;
+    margin-top: 5px;
+    width: 80px;
+}
+#sbutton:hover{
+    cursor: pointer;
+}

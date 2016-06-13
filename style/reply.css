@@ -1,0 +1,45 @@
+.msg{
+    line-height: 40px;
+}
+#main #list #list-main{
+    padding: 10px;
+}
+#main #list #list-main .pic{
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 8px;
+}
+#main #list #list-main p .edit{
+    position: relative;
+    left: -35px;
+}
+#main #list #list-main .list-main-box{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#main #list #list-main .list-main-box .wrapper{
+    padding: 5px;
+    background: #E4F4FE;
+}
+#main #list #list-main .list-main-box .wrapper .cont{
+    text-indent: 20px;
+}
+#main #list #list-main .list-main-box .reply_title{
+    margin-bottom: 5px;
+}
+#main #list #list-main .list-main-box .reply_title span{
+    color: #f40;
+}
+#main #list #list-main .list-main-box .reply_btn{
+    cursor: pointer;
+    padding: 3px 8px;
+    margin-top: 10px;
+}
+#vcode {
+    margin-left: 8px;
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}

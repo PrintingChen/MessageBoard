@@ -1,0 +1,95 @@
+#main #list {
+    background-image: url(../images/list_bg.gif);
+    background-repeat: repeat-x;
+    background-color: #F0F8FF;
+    padding: 20px 13px 13px 13px;
+    margin-top: 20px;
+    height: 100%;
+	overflow: hidden;
+}
+#main #list .person-left{
+	width: 71%;
+    float: left;
+    background: #fff;
+    box-shadow: 0px 0px 5px #6AC;
+    padding: 5px 5px 25px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+#main #list .person-left .msg-list li{
+	line-height: 40px;
+    padding: 0 5px;
+    border-bottom: 1px dashed #bbb;
+    position: relative;
+}
+#main #list .person-left .msg-list .msg-list-deta {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#main #list .person-left .msg-list .msg-title{
+	color: #0E88EB;
+	margin-right: 55px;
+}
+#main #list .person-left .msg-list .msg-title:hover {
+    text-decoration: underline;
+}
+#person-msg-edit{
+	color: #666;
+}
+#person-msg-edit:hover{
+	text-decoration: underline;
+}
+#person-msg-del {
+    color: #f40;
+}
+#person-msg-del:hover{
+	text-decoration: underline;
+}
+#main #list .person-right{
+	width: 26%;
+    float: right;
+    background: #fff;
+    box-shadow: 0px 0px 5px #6AC;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+#main #list .person-right .head-photo{
+	width: 100%;
+    height: 100px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+#main #list .person-right .head-photo{
+	display: block;
+	border: 0;
+	cursor: pointer;
+}
+#main #list .person-right .person-info li{
+	text-indent: 47px;
+    line-height: 25px;
+}
+#main #list .person-right .person-info .mdf-psw{
+	color: #0E88EB;
+}
+#main #list .person-right .person-info .mdf-psw:hover{
+	color: #f40;
+	text-decoration: underline;
+}
+
+.pages {
+    height: 20px;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 20px;
+}
+.pages a {
+    margin: 3px;
+    padding: 3px;
+    color: #175CBB;
+    border: 1px dashed #D5E4F4;
+    background: #F4FAFF;
+}
