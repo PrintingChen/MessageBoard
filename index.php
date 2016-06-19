@@ -4,11 +4,9 @@
     define('ON', true);
     //引入公共文件
     require_once 'inc/common.inc.php';
-
     $link = connect();
     //判断是否登录状态
     $member_id = login_state($link);
-
     //留言总数
     $sql_count = "select * from message";
     $counts = nums($link, $sql_count);
@@ -16,15 +14,13 @@
     $pageCount = ceil($counts/$pageSize);
     //分页
     $page = page($counts, $pageSize);
-	
     //处理提交的数据
     if (isset($_POST['submit'])) {
     	//引入验证文件
     	include 'inc/write.func.php';
     	$clean = array();
     	$clean['title'] = check_title($link, $_POST['title']);
-
-
+    	
 		if (is_file("sensitive.txt")) {
 			//读取文件
 			$str =  file_get_contents("sensitive.txt");

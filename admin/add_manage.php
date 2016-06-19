@@ -52,7 +52,7 @@
 			<div class="crumb-wrap">
 				<div class="crumb-list">
 					<i><img src="images/position.png" alt=""></i>
-					<a href="" color="#white">首页</a>
+					<a href="index.php" color="#white">首页</a>
 					<span class="crumb-step">&gt;</span>
 					<span class="crumb-name">添加管理员</span>
 				</div>

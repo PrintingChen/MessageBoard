@@ -15,6 +15,8 @@
     define('DB_DATABASE', 'message_board');
     define('DB_PORT', 3306);
 
+    //设置时区
+    date_default_timezone_set('PRC');
    
 
 

@@ -63,7 +63,7 @@
 			<form action="" method="post">
 				<p>
 					<img src="images/i3.gif">
-					<img src="images/login.gif">
+					<span class="member-login">用户注册:</span>
 				</p><br><br>
 				<div class="submit_div">
 					<label for="user">用户名：</label>

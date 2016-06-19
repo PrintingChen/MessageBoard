@@ -8,7 +8,7 @@
     $link = connect();
 
     //重置密码
-    $str = '000000';
+    $str = '111111a';
     $psw = md5($str);
 
     //判断获取过来的aid的合法性
@@ -29,10 +29,15 @@
     $sql_rst = "update admin set psw='{$psw}' where id={$_GET['aid']}";
     execute($link, $sql_rst);
     if (mysqli_affected_rows($link)) {
+        //清除SESSION
+        session_unset(); //释放当前会话注册的所有会话变量
+        session_destroy(); //销毁当前会话中的全部数据    
+        setcookie(session_name(), '', time()-3600, '/'); //销毁保存在客户端的卡号
+
         echo "<script>alert('密码重置成功');location.href = 'manage.php';</script>";
         exit();
     }else {
-        echo "<script>alert('密码重置失败');location.href = 'manage.php';</script>";
+        echo "<script>alert('已经重置过密码');location.href = 'manage.php';</script>";
         exit();
     }
 ?>

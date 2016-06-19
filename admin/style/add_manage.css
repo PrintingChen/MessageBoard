@@ -14,6 +14,9 @@
 	line-height: 40px;
 	border-bottom: 1px solid #eee;
 }
+.insert-tab tr:hover{
+	background-color: #E4F0DF;
+}
 .insert-tab tr td{
 	text-indent: 10px;
 }

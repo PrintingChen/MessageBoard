@@ -16,11 +16,17 @@
     	$clean['psw'] = md5($_POST['admin_psw']);
 
     	$sql = "select * from admin where name='{$clean['name']}' and psw='{$clean['psw']}'";
-    	//echo $sql;exit();
-    	execute($link, $sql);
+    	$res = execute($link, $sql);
+    	$data = fetch_array($res);
+    	$_SESSION['last_login_time'] = $data['last_login_time']; //上次登陆时间
+
     	if (nums($link, $sql)) {
 			$_SESSION['admin']['name'] = $clean['name'];
             $_SESSION['admin']['psw'] = $clean['psw'];
+            //更新登陆的时间
+	        $time = Date('Y-m-d H:i:s', time());
+	        $sql_time = "update admin set last_login_time='{$time}' where name='{$clean['name']}' and psw='{$clean['psw']}'";
+			execute($link, $sql_time);
 			skip('index.php', '恭喜你，登录成功，页面自动跳转中.....');
 			exit();
 		}else{

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016-06-13 23:15:46
+-- Generation Time: 2016-06-19 15:06:57
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `name` varchar(15) NOT NULL COMMENT '管理员名称',
   `psw` varchar(32) NOT NULL COMMENT '管理员密码',
   `insert_time` datetime NOT NULL COMMENT '添加时间',
+  `last_login_time` datetime NOT NULL COMMENT '最后登陆时间',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
@@ -38,9 +39,9 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- 转存表中的数据 `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `psw`, `insert_time`) VALUES
-(9, 'admin', '670b14728ad9902aecba32e22fa4f6bd', '2016-06-12 15:40:32'),
-(5, 'chyt', '670b14728ad9902aecba32e22fa4f6bd', '2016-06-11 13:09:26');
+INSERT INTO `admin` (`id`, `name`, `psw`, `insert_time`, `last_login_time`) VALUES
+(9, 'admin', '8e4ca7af923595919610e17f0dde5140', '2016-06-12 15:40:32', '2016-06-19 14:15:39'),
+(5, 'chyt', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-11 13:09:26', '2016-06-14 17:31:51');
 
 -- --------------------------------------------------------
 
@@ -55,16 +56,16 @@ CREATE TABLE IF NOT EXISTS `member` (
   `register_time` datetime NOT NULL COMMENT '注册时间',
   `last_login_time` datetime NOT NULL COMMENT '最后登陆时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `member`
 --
 
 INSERT INTO `member` (`id`, `name`, `psw`, `register_time`, `last_login_time`) VALUES
-(2, 'print', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-05 16:21:40', '2016-06-05 16:21:40'),
-(3, 'admin', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-05 16:30:46', '2016-06-05 16:30:46'),
-(11, '小益', 'dd65c29f365691150d8bc9c448a12d73', '2016-06-13 18:44:33', '2016-06-13 18:44:33'),
+(2, 'print', '9cbf8a4dcb8e30682b927f352d6559a0', '2016-06-05 16:21:40', '2016-06-14 08:54:22'),
+(3, 'admin', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-05 16:30:46', '2016-06-19 14:21:48'),
+(11, '小益', '8e4ca7af923595919610e17f0dde5140', '2016-06-13 18:44:33', '2016-06-15 09:12:20'),
 (7, '王五', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-05 17:29:21', '2016-06-05 17:29:21'),
 (8, '库里', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-06 14:36:54', '2016-06-06 14:36:54'),
 (9, 'James', '49dec5fb8af4eeef7c95e7f5c66c8ae6', '2016-06-06 16:39:26', '2016-06-06 16:39:26'),
@@ -85,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `state` int(11) NOT NULL DEFAULT '0' COMMENT '留言信息的状态',
   `top_state` int(11) NOT NULL DEFAULT '0' COMMENT '置顶状态',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 --
 -- 转存表中的数据 `message`
@@ -93,16 +94,16 @@ CREATE TABLE IF NOT EXISTS `message` (
 
 INSERT INTO `message` (`id`, `mid`, `title`, `content`, `content_time`, `state`, `top_state`) VALUES
 (1, 3, '库里', '勇士水花兄弟', '2016-06-05 17:57:55', 0, 0),
-(2, 3, 'James', '骑士詹姆斯。。。', '2016-06-05 18:12:29', 0, 0),
+(2, 3, 'James', '骑士詹姆斯。。', '2016-06-05 18:12:29', 0, 0),
 (23, 3, '决赛', '3:1了', '2016-06-13 13:12:28', 0, 0),
-(6, 7, '勇士VS骑士', '明天总决赛G2勇士对阵骑士。。。', '2016-06-05 22:07:37', 0, 0),
 (8, 2, '简单爱', '周杰伦--------简单爱', '2016-06-05 22:09:23', 0, 0),
 (18, 9, 'GS', 'GS is a strong team.', '2016-06-12 23:01:23', 0, 0),
 (21, 3, '雪', '是对方的身份的说法', '2016-06-13 12:56:09', 0, 0),
 (22, 3, '禁赛', 'Green·Dream被联盟禁赛一场。', '2016-06-13 13:11:08', 0, 0),
 (12, 8, '吊打骑士', '今天又在主场吊打了一顿骑士***\r\n。。', '2016-06-06 14:38:45', 0, 0),
 (13, 9, '输球', '今天又输了，大败勇士', '2016-06-06 16:40:03', 0, 0),
-(17, 3, '端午', '粽子节。', '2016-06-10 13:16:18', 0, 0);
+(17, 3, '端午', '粽子节。', '2016-06-10 13:16:18', 0, 0),
+(24, 9, '金州勇士', '今天在甲骨文球馆又扳回了一局!', '2016-06-14 15:27:01', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -118,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `reply` (
   `member_id` int(11) NOT NULL COMMENT '回复者的id',
   `quote_id` int(11) NOT NULL DEFAULT '0' COMMENT '要引入回复的留言的id',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- 转存表中的数据 `reply`
@@ -143,7 +144,10 @@ INSERT INTO `reply` (`id`, `content_id`, `content_reply`, `reply_time`, `member_
 (27, 18, 'No!', '2016-06-12 23:02:01', 9, 26),
 (28, 2, '的的点点滴滴', '2016-06-13 12:54:46', 3, 0),
 (24, 13, '哈哈哈哈', '2016-06-10 14:57:53', 2, 0),
-(25, 4, '老王老王老王', '2016-06-10 14:59:03', 2, 0);
+(25, 4, '老王老王老王', '2016-06-10 14:59:03', 2, 0),
+(29, 2, '噢噢噢噢', '2016-06-14 15:25:55', 3, 28),
+(30, 23, '悬了，要输了。', '2016-06-14 15:28:57', 9, 0),
+(31, 25, 'eeeeee', '2016-06-19 09:59:35', 3, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

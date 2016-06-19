@@ -25,8 +25,14 @@
     	//验证数据库是否存在这条数据
     	$sql_sel = "select * from member where name='{$clean['name']}' and psw='{$clean['psw']}'";
 		if (nums($link, $sql_sel)) {
+			//保存用户登陆信息
 			setcookie('mb[user]', $clean['name']);
 	        setcookie('mb[psw]', $clean['psw']);
+	        //更新用户登陆的时间
+	        $time = Date('Y-m-d H:i:s', time());
+	        $sql_time = "update member set last_login_time='{$time}' where name='{$clean['name']}' and psw='{$clean['psw']}'";
+			execute($link, $sql_time);
+			
 			skip('index.php', '恭喜你，登录成功，页面自动跳转中.....');
 			exit();
 		}else{
@@ -55,7 +61,7 @@
 			<form action="" method="post">
 				<p>
 					<img src="images/i3.gif">
-					<img src="images/login.gif">
+					<span class="member-login">用户登录:</span>
 				</p><br><br>
 				<div class="submit_div">
 					<label for="user">用户登录名：</label>

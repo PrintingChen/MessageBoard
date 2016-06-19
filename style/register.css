@@ -30,3 +30,10 @@ input{
     top: -23px;
     left: 200px;
 }
+.member-login {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    font-size: 22px;
+    color: #757EF7;
+}

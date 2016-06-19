@@ -29,3 +29,6 @@
 .del .sel-all{
 	background: url(../images/sel.png) no-repeat left center;
 }
+.del .del-all input{
+	cursor: pointer;
+}

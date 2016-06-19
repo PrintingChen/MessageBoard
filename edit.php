@@ -43,7 +43,7 @@
 			skip('person.php', '编辑留言成功，页面自动跳转中.....');
 			exit();
 		}else{
-			skip('person.php', '您未改动编辑留言，页面自动跳转中.....');
+			skip("edit.php?cid={$_GET['cid']}", '您未改动编辑留言，页面自动跳转中.....');
 			exit();
 		}
     	
@@ -76,7 +76,7 @@
 				<label for="content">内容：</label>
 				<textarea name="content" id="content" placeholder="写下你的留言..."><?php echo $data_sel_cont['content']?></textarea><br><br>
 				<label for="umum">验证码：</label><input name="unum" type="text" id="unum" size="10"><img src="inc/vcode.php" alt="验证码" title="点击刷新" id="vcode" ><br><br>
-				<input type="submit" name="submit" id="sbutton" value="发布留言">
+				<input type="submit" name="submit" id="sbutton" value="编辑留言">
 			</form>
 		</div>
 		<?php include "inc/footer.inc.php";?>
